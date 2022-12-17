@@ -12,15 +12,12 @@ public class Student {
     private String SID;
     private String firstName;
     private String lastName;
-    private double gpa;
-
     //constructor
     public Student(){
         this.index = -1;
         this.SID = "";
         this.firstName = "";
         this.lastName = "";
-        this.gpa = 0.;
     }
     //overload
     public Student(String SID, String firstName){
@@ -32,21 +29,10 @@ public class Student {
         this.firstName = firstName;
         this.lastName = lastName;
     }
-    public Student(String SID, String firstName, double gpa){
-        this.SID = SID;
-        this.firstName = firstName;
-        this.gpa = gpa;
-    }
     public Student(int index, String SID, String firstName){
         this.index = index;
         this.SID = SID;
         this.firstName = firstName;
-    }
-    public Student(int index, String SID, String firstName, double gpa){
-        this.index = index;
-        this.SID = SID;
-        this.firstName = firstName;
-        this.gpa = gpa;
     }
     public Student(int index, String SID, String firstName, String lastName){
         this.index = index;
@@ -54,19 +40,12 @@ public class Student {
         this.firstName = firstName;
         this.lastName = lastName;
     }
-    public Student(int index, String SID, String firstName, String lastName, double gpa){
-        this.index = index;
-        this.SID = SID;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.gpa = 0.;
-    }
     //end overload
     //set/
     public void setIndex(int index){
         this.index = index;
     }
-    public void setIndex(String SID){
+    public void setSID(String SID){
         this.SID =SID;
     }
     public void setFirstName(String firstName){
@@ -75,13 +54,23 @@ public class Student {
     public void setLastName(String lastName){
         this.lastName = lastName;
     }
-    public void setGPA(double gpa){
-        this.gpa = gpa;
-    }
     //end set/
-
-    //inherited
+    //get/
+    public int getIndex(){
+        return this.index;
+    }
+    public String getSID(){
+        return this.SID;
+    }
+    public String getFirstName(){
+        return this.firstName;
+    }
+    public String getLastName(){
+        return this.lastName;
+    }
+    //end get/
+    //toString template to show student's all available info
     public String toString(){
-        return "[ " + this.index + " | " + this.SID + " | " + this.firstName + " " + this.lastName + " { GPA  | " + this.gpa + " } ]";
+        return "[ " + this.index + " | " + this.SID + " | " + this.firstName + " " + this.lastName + " ]";
     }
 }
