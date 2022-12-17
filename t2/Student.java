@@ -73,4 +73,7 @@ public class Student {
     public String toString(){
         return "[ " + this.index + " | " + this.SID + " | " + this.firstName + " " + this.lastName + " ]";
     }
+    public String toString2(){
+        return "[ " + this.index + " | " + this.SID + " | " + this.firstName + " ]";
+    }
 }
