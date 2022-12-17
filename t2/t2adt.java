@@ -40,18 +40,24 @@ public class t2adt {
                 //add temp object into dynamic array
                 myStudents.add(myStudent);
             }
-            ///output
+        ///output
             System.out.println("Total Students = " + myStudents.size());
             //all students
             for(int i = 0; i < myStudents.size(); i++) {
-                System.out.println(myStudents.get(i).toString());
+                if(myStudents.get(i).getLastName() == null){
+                    System.out.println(myStudents.get(i).toString2());
+                }else System.out.println(myStudents.get(i).toString());
             }
             
             //search
-            System.out.println("\n//////////////////////////////");
+            System.out.println("\n//////////////////////////////\n");
             System.out.println("linear search\n");
             Student thisStudent = linearSearch(myStudents, "652115013");
-            System.out.println("me = " + thisStudent.toString());
+            
+                if(thisStudent.getLastName() == null){
+                    System.out.println("me = " + thisStudent.toString2());
+                }else System.out.println("me = " + thisStudent.toString());
+           
             //myStudents >> [STUDENT1, STUDENT2(object id)]
             //program end
             scan.close();//clean up
